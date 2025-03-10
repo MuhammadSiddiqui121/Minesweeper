@@ -99,8 +99,8 @@ public int countMines(int row, int col)
     //your code here
 for( int r=- 1; r <= 1; r++){
          for( int c =  -1; c <=  1; c++ ){
-           int newRow = NUM_ROWS + r;
-           int newCol = NUM_COLS + c;
+           int newRow = row + r;
+           int newCol = col + c;
           if( ! ( r == 0  && c == 0)){
            if(isValid(newRow,newCol) && mines.contains(buttons[newRow][newCol])){
                numMines++;
